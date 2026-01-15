@@ -16,7 +16,7 @@
 <style>
 	nav {
 		background-color: lightblue;
-		min-height: 10vw;
+		min-height: 20vh;
 		padding: 0 2vw;
 
 		display: flex;
