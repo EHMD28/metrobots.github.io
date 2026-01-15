@@ -44,6 +44,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
+		z-index: 2;
 		transition: height 0.5s ease;
 
 		display: flex;
