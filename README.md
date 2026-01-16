@@ -1,38 +1,112 @@
-# sv
+# Overview
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This website is built using [SvelteKit](https://svelte.dev/docs/kit/introduction). Svelte code is
+compliant with HTML, so you can copy and paste code from the main website into SvelteKit just fine
+([with one exception](#html-compatibility-exception) that I know of). The website using the
+[static adapter](https://svelte.dev/docs/kit/adapter-static) so it can deployed using Github Pages.
+The only difference this makes is that there's no server-side code, but that shouldn't make a
+difference for this website.
 
-## Creating a project
+## HTML Compatibility Exception
 
-If you're seeing this, you've probably already done this step. Congrats!
+Svelte doesn't allow you to excute javascript in quotes. For example, in HTML, you can write code
+like
 
-```sh
-# create a new project in the current directory
-npx sv create
+```html
+<script>
+	function doSomething() {
+		console.log('Something');
+	}
+</script>
 
-# create a new project in my-app
-npx sv create my-app
+<button onclick="doSomething()">Click Me</button>
 ```
 
-## Developing
+However, in Svelte, you need to write it using curly braces.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```svelte
+<script>
+	function doSomething() {
+		console.log('Something');
+	}
+</script>
 
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+<button onclick={doSomething}>Click Me</button>
 ```
 
-## Building
+If you need to pass parameters to the function, write it like this
 
-To create a production version of your app:
+```svelte
+<script>
+	function doSomething(message) {
+		console.log(message);
+	}
+</script>
 
-```sh
-npm run build
+<button onclick={() => doSomething('Something')}>Click Me</button>
 ```
 
-You can preview the production build with `npm run preview`.
+# Running
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+You need [Node.js](https://nodejs.org/en) installed to view the website locally. If you do not have
+Node.js installed, open the "terminal" app on you laptop and run these commands (copy and paste, the
+press enter).
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+source "$HOME/.nvm/nvm.sh"
+nvm install 24
+```
+
+To verify that the install suceeded, run these commands in the terminal.
+
+```bash
+node -v
+npm -v
+```
+
+Now, you need to download the code. It's necessary to use [Git](https://git-scm.com/install/mac) to
+update code when you make changes on your laptop. There are multiple methods, but the easiest (and
+most space efficient) one is using [Homebrew](https://brew.sh/). To install using Homebrew, run
+these commands in your terminal.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install git
+```
+
+Now, you can download the code using Git. If you don't have a directory specifically for code, I
+would recommend just using the `Downloads` folder. Run these commands in your terminal.
+
+```bash
+cd ~/Downloads
+git clone https://github.com/EHMD28/metrobots.github.io.git metrobots-sveltekit
+cd metrobots-sveltekit
+git checkout sveltekit
+```
+
+# Editing
+
+Refer to [Project Structure](#project-structure) for details about where to place/edit files. The
+recommended IDE for Svelte is [Visual Studio Code](https://code.visualstudio.com/) with the official
+Svelte extension installed. I plan on making a proper style guide in the future.
+
+# Project Structure
+
+- `src/routes/` - All routes should be placed in this directory. In each route directory, except
+  intermediate routes, there should be a `+page.svelte` file with the content for that page.
+
+- `src/routes/+layout.svelte` - This page defines the layout for all subpages. This is where the
+  navbar and footer code should be placed.
+
+- `src/routes/+page.svelte` - This is the homepage of the website.
+
+- `src/lib/assets` - All images should be placed in an appropriate subdirectory. Prefer `.svg` files
+  over `.png` or `.jpeg` when possible. They can be accessed in code using
+
+- `src/lib/components` - All reusable Svelte components should be placed in this directory.
+
+- `src/lib/index.js` - Any non-page-specific code should be placed in this file. I don't think it
+  should be necessary for this project.
+
+- `static` - Location for files which need to be referenced statically rather than being imported.
