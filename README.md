@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> Make sure you are on the "sveltekit" branch, not the "main" branch.
+> Make sure you are on the "sveltekit" branch, not the "main" branch. Github doesn't always display images correctly on the school network, so you might need to download the image to see it. 
 
 ![branch-screenshot](branch-screenshot.png)
 
