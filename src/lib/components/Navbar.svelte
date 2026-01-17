@@ -6,18 +6,8 @@
 
 	let isCollapsed = $state(false);
 
-	function handle_scroll(event) {
-		let scroll = window.scrollY;
-		const scrollThreshold = 50;
-		/* It's necessary to have a margin of error, since changing the size of
-        the navbar changes the scroll of he window. */
-		const margin = 30;
-		isCollapsed = scroll > scrollThreshold;
-		if (!isCollapsed && scroll > scrollThreshold + margin) {
-			isCollapsed = true;
-		} else if (isCollapsed && scroll < scrollThreshold - margin) {
-			isCollapsed = false;
-		}
+	function handle_scroll(_) {
+		isCollapsed = window.scrollY > 0;
 	}
 </script>
 
