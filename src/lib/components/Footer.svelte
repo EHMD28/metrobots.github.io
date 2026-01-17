@@ -1,6 +1,6 @@
 <script>
 	import email_logo from '$lib/assets/icons/email.svg';
-	import github_logo from '$lib/assets/icons/github.svg';
+	import github_logo from '$lib/assets/icons/logos/github.svg';
 </script>
 
 <footer>
