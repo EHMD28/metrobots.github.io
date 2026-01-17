@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@event-calendar/core':
+        specifier: ^5.2.3
+        version: 5.2.3
       '@sveltejs/adapter-static':
         specifier: ^3.0.10
         version: 3.0.10(@sveltejs/kit@2.49.4(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.46.3)(vite@7.3.1))(svelte@5.46.3)(typescript@5.9.3)(vite@7.3.1))
@@ -193,6 +196,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@event-calendar/core@5.2.3':
+    resolution: {integrity: sha512-faqkP73keHNoKULDtz4O8KvxQI9ITndCQrc1ogtHTPR2/8SrOrHeXTCDLDzx7JZR6edIzEizYLi9iPsDMwjM7w==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -675,6 +681,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.27.2':
     optional: true
+
+  '@event-calendar/core@5.2.3':
+    dependencies:
+      svelte: 5.46.3
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
