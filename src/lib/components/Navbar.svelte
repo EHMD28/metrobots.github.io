@@ -29,8 +29,9 @@
 	</a>
 	<div id="page-links">
 		<a href={resolve('/leadership')}>Leadership</a>
-		<a href={resolve('/season')}>Season</a>
+		<a href={resolve('/season')}>2025-2026 Season</a>
 		<a href={resolve('/resources')}>Resources</a>
+		<a href={resolve('/gallery')}>Gallery</a>
 	</div>
 </nav>
 

@@ -26,6 +26,8 @@
 		min-height: 50vh;
 
 		background-color: darkgray;
+		border: 2px solid darkslategray;
+		border-radius: 20px;
 
 		display: flex;
 		flex-direction: column;
