@@ -133,7 +133,7 @@ Svelte extension installed. I plan on making a proper style guide in the future.
 
 - `src/routes/+page.svelte` - This is the homepage of the website.
 
-- `src/lib/assets` - All images should be placed in an appropriate subdirectory. Prefer `.svg` files
+- `src/lib/assets/` - All images should be placed in an appropriate subdirectory. Prefer `.svg` files
   over `.png` or `.jpeg` when possible. They can be accessed in code using
 
 - `src/lib/components` - All reusable Svelte components should be placed in this directory.
@@ -141,4 +141,4 @@ Svelte extension installed. I plan on making a proper style guide in the future.
 - `src/lib/index.js` - Any non-page-specific code should be placed in this file. I don't think it
   should be necessary for this project.
 
-- `static` - Location for files which need to be referenced statically rather than being imported.
+- `static/` - Location for files which need to be referenced statically rather than being imported.
