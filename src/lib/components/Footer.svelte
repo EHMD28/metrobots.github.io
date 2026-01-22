@@ -43,7 +43,7 @@
 	}
 
 	#links-container img {
-		width: 5vw;
+		width: 50px;
 		background-color: white;
 		border-radius: 10px;
 	}
