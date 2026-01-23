@@ -99,10 +99,8 @@ would recommend just using the `Downloads` folder. Run these commands in your te
 cd ~/Downloads
 git clone https://github.com/EHMD28/metrobots.github.io.git metrobots-sveltekit
 cd metrobots-sveltekit
-git checkout sveltekit
 ```
 
-The line `git checkout sveltekit` is very important because I am **NOT** working on the main branch.
 Alternatively, you could use the "Download ZIP" option on Github. Now, whenever you want to see the
 current state of the website, open the project in Visual Studio Code and run this in the terminal.
 
