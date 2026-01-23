@@ -1,1 +1,2 @@
-- [ ] Fix navbar behavior
+- [x] Fix navbar behavior
+- [ ] Updated photo carousel/gallery
