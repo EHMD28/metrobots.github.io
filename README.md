@@ -2,7 +2,7 @@
 
 This website is built using [SvelteKit](https://svelte.dev/docs/kit/introduction). Svelte code is
 compliant with HTML, so you can copy and paste code from the main website into SvelteKit just fine
-([with two exceptions](#html-compatibility-exception) that I know of). The website uses the
+(with two exceptions that I know of). The website uses the
 [static adapter](https://svelte.dev/docs/kit/adapter-static) so it can deployed using Github Pages.
 The only difference this makes from traditional SvelteKit projects is that there's no server-side
 code, but that shouldn't make a difference for this website.
