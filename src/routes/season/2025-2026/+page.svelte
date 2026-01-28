@@ -31,6 +31,9 @@
 		pariatur facilis ad beatae, voluptate officiis repudiandae vel numquam, nesciunt neque quos
 		consequuntur similique architecto amet. Nisi, fugit.
 	</p>
+	<br />
+	<a href="">2025-2026 Robot CAD (Onshape) - NOT LINKED YET</a>
+	<a href="https://github.com/metrobots/26-final">2025-2026 Robot Code</a>
 </main>
 
 <style>
@@ -40,10 +43,13 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* gap: 5vh; */
 	}
 
 	h1 {
 		text-align: center;
+	}
+
+	a {
+		align-self: baseline;
 	}
 </style>
