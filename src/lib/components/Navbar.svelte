@@ -1,6 +1,6 @@
 <script>
 	import { resolve } from '$app/paths';
-	import hamburgerIcon from '$lib/assets/icons/hamburger_menu.svg';
+	import hamburgerIcon from '$lib/assets/icons/other/hamburger_menu.svg';
 	import metrobotsLogo from '$lib/assets/favicon/fancy-metrobots-logo.png';
 
 	// Used to collapse navbar on scroll.

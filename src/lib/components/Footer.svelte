@@ -1,21 +1,44 @@
 <script>
-	import email_logo from '$lib/assets/icons/email.svg';
-	import github_logo from '$lib/assets/icons/logos/github.svg';
+	import emailLogo from '$lib/assets/icons/other/email.svg';
+	import githubLogo from '$lib/assets/icons/logos/github.svg';
+	import instagramLogo from '$lib/assets/icons/logos/instagram.svg';
+	import xLogo from '$lib/assets/icons/logos/x.svg';
+	import youtubeLogo from '$lib/assets/icons/logos/youtube.svg';
+	import FooterLink from './FooterLink.svelte';
 </script>
 
 <footer>
 	<div id="links-container">
-		<a href="mailto:team3324metrobots@gmail.com" target="_blank">
-			<img src={email_logo} alt="Metrobots Email" />
-			<span class="horizontal-spacer"></span>
-			<p>Email: team3324metrobots@gmail.com</p>
-		</a>
-		<span class="vertical-spacer"></span>
-		<a href="https://github.com/metrobots" target="_blank">
-			<img src={github_logo} alt="Metrobots Github" />
-			<span class="horizontal-spacer"></span>
-			<p>Github: metrobots</p>
-		</a>
+		<FooterLink
+			link="mailto:metrobots3324@gmail.com"
+			imgSrc={emailLogo}
+			siteName="Email"
+			at="team3324metrobots@gmail.com"
+		/>
+		<FooterLink
+			link="https://github.com/metrobots"
+			imgSrc={githubLogo}
+			siteName="Github"
+			at="metrobots"
+		/>
+		<FooterLink
+			link="https://www.instagram.com/metrobots3324"
+			imgSrc={instagramLogo}
+			siteName="Instagram"
+			at="@metrobots3324"
+		/>
+		<FooterLink
+			link="https://twitter.com/metrobots3324?lang=en"
+			imgSrc={xLogo}
+			siteName="Twitter/X"
+			at="@metrobots3324"
+		/>
+		<FooterLink
+			link="https://www.youtube.com/@TeamMetrobots"
+			imgSrc={youtubeLogo}
+			siteName="YouTube"
+			at="@TeamMetrobots"
+		/>
 	</div>
 </footer>
 
@@ -25,38 +48,12 @@
 
 		min-height: 15vh;
 
-		padding: 2vh 5vw;
+		padding: 4vh 5vw;
 	}
 
 	#links-container {
-		display: grid;
-		grid-template-rows: auto auto;
-	}
-
-	#links-container a {
-		height: 100%;
-
-		text-decoration: none;
-
 		display: flex;
-		align-items: center;
-	}
-
-	#links-container img {
-		width: 50px;
-		background-color: white;
-		border-radius: 10px;
-	}
-
-	#links-container p {
-		color: white;
-	}
-
-	.horizontal-spacer {
-		width: 2vw;
-	}
-
-	.vertical-spacer {
-		height: 4vh;
+		flex-direction: column;
+		gap: 20px;
 	}
 </style>
