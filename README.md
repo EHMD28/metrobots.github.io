@@ -125,10 +125,6 @@ or
 
 # Running
 
-If you are just editing text, then [GitHub Codespaces](https://github.com/features/codespaces)
-should work just fine. However, if you are making **ANY** UI changes, then you should preview the
-website locally before publishing those changes.
-
 ## Tooling
 
 You need [Node.js](https://nodejs.org/en) installed to view the website locally. If you do not have
@@ -186,6 +182,10 @@ npm run dev
 ```
 
 # Editing
+
+If you are just editing text, then [GitHub Codespaces](https://github.com/features/codespaces)
+should work just fine. However, if you are making **ANY** UI changes, then you should preview the
+website locally before publishing those changes.
 
 Refer to [Project Structure](#project-structure) for details about where to place/edit files. The
 recommended IDE for Svelte is [Visual Studio Code](https://code.visualstudio.com/) with the official
