@@ -43,6 +43,7 @@
 		<a href={resolve('/season/2025-2026')}>2025-2026 Season</a>
 		<a href={resolve('/resources')}>Resources</a>
 		<a href={resolve('/gallery')}>Gallery</a>
+		<a href={resolve('/docs')}>Documentation</a>
 	</div>
 </nav>
 
